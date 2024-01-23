@@ -4,7 +4,7 @@ on: push
 jobs:
   build:
     name: Hello world action
-    runs-on: ubuntu-20.04
+    runs-on: windows latest
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -21,3 +21,4 @@ jobs:
         run: docker run --name semcontainer -d semimage
       - name: view logs
         run: docker logs semcontainer
+
